@@ -2,6 +2,71 @@
   "name": "office-ui-fabric-react",
   "entries": [
     {
+      "date": "Wed, 23 Oct 2019 12:32:05 GMT",
+      "tag": "office-ui-fabric-react_v7.54.1",
+      "version": "7.54.1",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Dropdown: Added note to documentation page calling out Dropdown's behavior of rendering in a panel in very small viewports.",
+            "author": "mgodbolt@microsoft.com",
+            "commit": "18fd8a4129f4e61e4574a4478609517cf396f7c7"
+          },
+          {
+            "comment": "TagPicker: make tag item and input text to respect theme color and have correct font",
+            "author": "xgao@microsoft.com",
+            "commit": "5612231e960d701aecf968601e1d252dc09338d2"
+          },
+          {
+            "comment": "Suggestions: Fix problem where search for more button wouldn't highlight correctly",
+            "author": "joschect@microsoft.com",
+            "commit": "22a4a1b769dbb2e02286fa38250c56ef22771314"
+          },
+          {
+            "comment": "TagPicker: Update snapshots",
+            "author": "jdh@microsoft.com",
+            "commit": "ed7594ba53b27d3ff04ee26995e7f7961fcdd260"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Tue, 22 Oct 2019 12:32:05 GMT",
+      "tag": "office-ui-fabric-react_v7.54.0",
+      "version": "7.54.0",
+      "comments": {
+        "patch": [
+          {
+            "comment": "consume suggestionsAvailableAlertText prop to floating picker, so that the screen readers can announce the apperance of suggestions when the prop is set.",
+            "author": "email not defined",
+            "commit": "98295b29d8f60465f38c8ec2ccc10c554f3dca78"
+          },
+          {
+            "comment": "Fix getDerivedStateFromProps signatures",
+            "author": "elcraig@microsoft.com",
+            "commit": "437c49f055744dc64f13e6ef8c71f5f2d5110d0a"
+          },
+          {
+            "comment": "TagPicker: prevent long items from overflowing narrow container",
+            "author": "elcraig@microsoft.com",
+            "commit": "3d330f77a317b5cbbfed105c270b7b4b942fa667"
+          },
+          {
+            "comment": "TagPicker: Close button high contrast color fix",
+            "author": "joschect@microsoft.com",
+            "commit": "6204b561520761c77204f26d331cbfb6c6ae3e2d"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "ContextualMenu: Tightening types of onDismiss callback.",
+            "author": "Humberto.Morimoto@microsoft.com",
+            "commit": "422c0c5b31a2348c3a8f1c94eca91d6a6a776ccd"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 21 Oct 2019 12:33:23 GMT",
       "tag": "office-ui-fabric-react_v7.53.1",
       "version": "7.53.1",
