@@ -1,7 +1,22 @@
 # Change Log - office-ui-fabric-react
 
-This log was last generated on Thu, 24 Oct 2019 12:31:42 GMT and should not be manually modified.
+This log was last generated on Mon, 28 Oct 2019 12:31:48 GMT and should not be manually modified.
 
+## 7.55.2
+Mon, 28 Oct 2019 12:31:48 GMT
+
+### Patches
+
+- Panel: Use semantic colors (elcraig@microsoft.com)
+- removing circular IPoint import (mehanig@gmail.com)
+## 7.55.1
+Fri, 25 Oct 2019 12:31:49 GMT
+
+### Patches
+
+- Facepile: added ARIA label so ARIA input fields should have an accessible name addressing issue #10877 (marygans@microsoft.com)
+- Dropdown: Moving announcement of selected options from aria-describedby to aria-labelledby. (Humberto.Morimoto@microsoft.com)
+- Fix button _onDismissMenu to accept undefined event params (mgodbolt@microsoft.com)
 ## 7.55.0
 Thu, 24 Oct 2019 12:31:42 GMT
 
