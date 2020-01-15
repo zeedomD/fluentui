@@ -2,6 +2,189 @@
   "name": "@uifabric/experiments",
   "entries": [
     {
+      "date": "Mon, 13 Jan 2020 12:28:56 GMT",
+      "tag": "@uifabric/experiments_v7.18.13",
+      "version": "7.18.13",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Tile: fix color of text over image in dark mode",
+            "author": "prchhaje@microsoft.com",
+            "commit": "964a018662ecadc2db4f6ee9cb049bc9543b1ec3"
+          },
+          {
+            "comment": "Consume compose functions where appropriate",
+            "author": "tmichon@microsoft.com",
+            "commit": "d9eaef588f46c10fe8c1791957571a8eb467d02e"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Fri, 10 Jan 2020 12:31:47 GMT",
+      "tag": "@uifabric/experiments_v7.18.12",
+      "version": "7.18.12",
+      "comments": {
+        "patch": [
+          {
+            "comment": "ComboBox: fix chevron button and focus border styling",
+            "author": "xgao@microsoft.com",
+            "commit": "b1f23673efec6c713219c81d02be736f3dc7a373"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Wed, 08 Jan 2020 17:02:57 GMT",
+      "tag": "@uifabric/experiments_v7.18.11",
+      "version": "7.18.11",
+      "comments": {
+        "none": [
+          {
+            "comment": "Break up build task into build, bundle, test and lint tasks. Add parallelization pipeline using new tasks.",
+            "author": "jagore@microsoft.com",
+            "commit": "f1f07695f5d18c2c975eef382c5b777d7ccb52e2"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "Update snapshots from combobox style update",
+            "author": "xgao@microsoft.com",
+            "commit": "3d78a7b98fca4a03ed6116106628722f6c8c262e"
+          },
+          {
+            "comment": "bumping load-themed-styles to take advantage of es6 version of it",
+            "author": "kchau@microsoft.com",
+            "commit": "9041aee981e0ad058920172d078af2d2cc2292db"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Tue, 24 Dec 2019 12:33:51 GMT",
+      "tag": "@uifabric/experiments_v7.18.10",
+      "version": "7.18.10",
+      "comments": {
+        "none": [
+          {
+            "comment": "Snapshot updates",
+            "author": "elcraig@microsoft.com",
+            "commit": "48c4125c20e70512140597cc94447991607237c4"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Tue, 17 Dec 2019 12:29:42 GMT",
+      "tag": "@uifabric/experiments_v7.18.10",
+      "version": "7.18.10",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Refining typography and signal icon on top of Folder Icon, filetype mapping updates",
+            "author": "caperez@microsoft.com",
+            "commit": "4d72a330013373ac60292c9cb3ef8787ad2fd408"
+          },
+          {
+            "comment": "PersonaCoin: make divs role presentation",
+            "author": "micahgodbolt@gmail.com",
+            "commit": "f491aa022d50b489b2a9bd49ef29ee48870213ef"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Sun, 15 Dec 2019 23:45:36 GMT",
+      "tag": "@uifabric/experiments_v7.18.9",
+      "version": "7.18.9",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Fix minor picker doc issue",
+            "author": "elcraig@microsoft.com",
+            "commit": "c97aedf3e01fceec41896005ed602d87dce9c3b4"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Fri, 06 Dec 2019 12:33:21 GMT",
+      "tag": "@uifabric/experiments_v7.18.8",
+      "version": "7.18.8",
+      "comments": {
+        "patch": [
+          {
+            "comment": "updated snapshots",
+            "author": "betrue@microsoft.com",
+            "commit": "287bff63b4a7803d0c8ff21bc9f927777fc2ceb3"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Thu, 05 Dec 2019 12:34:16 GMT",
+      "tag": "@uifabric/experiments_v7.18.7",
+      "version": "7.18.7",
+      "comments": {
+        "patch": [
+          {
+            "comment": "ComboBox: empty errorMessage shouldn't create white space",
+            "author": "aneeshak@microsoft.com",
+            "commit": "55ccc0dac8e3e16b874492f5fa8f0527d1de9ea4"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Mon, 25 Nov 2019 12:31:13 GMT",
+      "tag": "@uifabric/experiments_v7.18.6",
+      "version": "7.18.6",
+      "comments": {
+        "none": [
+          {
+            "comment": "Experimental button: removed unnecessary test that was causing flickers",
+            "author": "mgodbolt@microsoft.com",
+            "commit": "2ddcf0242d9daab050f5446b93ae6f34a67a9668"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Mon, 18 Nov 2019 12:33:30 GMT",
+      "tag": "@uifabric/experiments_v7.18.6",
+      "version": "7.18.6",
+      "comments": {
+        "patch": [
+          {
+            "comment": "update test due to fix: Combobox high contrast mode fixes for input box, caret down button, option hover styles",
+            "author": "xgao@microsoft.com",
+            "commit": "7635ef9bada90c91800ba4e6b1e83ce98fe5e308"
+          }
+        ],
+        "none": [
+          {
+            "comment": "Fix \"the the\" to \"the\"",
+            "author": "the.kinnikuman@gmail.com",
+            "commit": "fc378d1cf157c6022db9e2d2b9a4422e3872a824"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Thu, 14 Nov 2019 12:30:52 GMT",
+      "tag": "@uifabric/experiments_v7.18.5",
+      "version": "7.18.5",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Added ariaLabel to microfeedback component",
+            "author": "kamal.elkhadiri@microsoft.com",
+            "commit": "f581241276972030719132b6ec870e31b19faa48"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 08 Nov 2019 12:30:07 GMT",
       "tag": "@uifabric/experiments_v7.18.4",
       "version": "7.18.4",

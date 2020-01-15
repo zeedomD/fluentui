@@ -1,7 +1,53 @@
 # Change Log - @uifabric/utilities
 
-This log was last generated on Mon, 07 Oct 2019 12:33:45 GMT and should not be manually modified.
+This log was last generated on Mon, 13 Jan 2020 12:28:56 GMT and should not be manually modified.
 
+## 7.11.0
+Mon, 13 Jan 2020 12:28:56 GMT
+
+### Minor changes
+
+- Add composeComponentAs to compose React decorator components (tmichon@microsoft.com)
+- Change focus class behavior: Alternate between 'hidden' and 'visible' classes (paflakst@microsoft.com)
+## 7.10.0
+Thu, 09 Jan 2020 12:34:52 GMT
+
+### Minor changes
+
+- memoizeFunction: The items for which callback method returned null/undefined value, null/undefined was being stored in cache for these items. In this PR, a new flag is introduced based on which the cached undefined/null value can be updated till the time non-undefined/null value is encountered for the first time. (vishgup@microsoft.com)
+## 7.9.0
+Mon, 06 Jan 2020 12:29:10 GMT
+
+### Minor changes
+
+- Selection: accept generic item type (elcraig@microsoft.com)
+### Patches
+
+- getClassNames: fix for LTR in RTL context. (jdh@microsoft.com)
+## 7.8.0
+Fri, 20 Dec 2019 12:32:45 GMT
+
+### Minor changes
+
+- scroll.ts: added allowOverscrollOnElement, alternative to allowScrollOnElement that allows body scroll on touch devices (dmitriy.ravdin@siemens.com)
+## 7.7.1
+Tue, 17 Dec 2019 12:29:42 GMT
+
+### Patches
+
+- add select to be a focusable target for focus utility (joschect@microsoft.com)
+## 7.7.0
+Sun, 15 Dec 2019 23:45:36 GMT
+
+### Minor changes
+
+- getRTL uses RTL flag on theme if present. (jdh@microsoft.com)
+## 7.6.0
+Mon, 18 Nov 2019 12:33:30 GMT
+
+### Minor changes
+
+- AutoScroll: Add horizontal scrolling (v-mare@microsoft.com)
 ## 7.5.0
 Mon, 07 Oct 2019 12:33:45 GMT
 

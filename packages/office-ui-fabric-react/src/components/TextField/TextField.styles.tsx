@@ -1,6 +1,7 @@
 import {
   AnimationClassNames,
   getGlobalClassNames,
+  getInputFocusStyle,
   HighContrastSelector,
   IStyle,
   normalize,
@@ -107,29 +108,6 @@ export function getStyles(props: ITextFieldStyleProps): ITextFieldStyles {
     color: semanticColors.disabledText
   };
 
-  const getFocusBorder = (color: string, borderType: 'border' | 'borderBottom' = 'border'): IStyle => ({
-    borderColor: color,
-    selectors: {
-      ':after': {
-        pointerEvents: 'none',
-        content: "''",
-        position: 'absolute',
-        left: -1,
-        top: -1,
-        bottom: -1,
-        right: -1,
-        [borderType]: '2px solid ' + color,
-        borderRadius: effects.roundedCorner2,
-        width: borderType === 'borderBottom' ? '100%' : undefined,
-        selectors: {
-          [HighContrastSelector]: {
-            [borderType === 'border' ? 'borderColor' : 'borderBottomColor']: 'Highlight'
-          }
-        }
-      }
-    }
-  });
-
   return {
     root: [
       classNames.root,
@@ -156,7 +134,12 @@ export function getStyles(props: ITextFieldStyleProps): ITextFieldStyles {
           width: '100%'
         },
         disabled && {
-          borderBottomColor: semanticColors.disabledBackground
+          borderBottomColor: semanticColors.disabledBackground,
+          selectors: {
+            [HighContrastSelector]: {
+              borderColor: 'GrayText'
+            }
+          }
         },
         !disabled && {
           selectors: {
@@ -170,7 +153,12 @@ export function getStyles(props: ITextFieldStyleProps): ITextFieldStyles {
             }
           }
         },
-        focused && getFocusBorder(!hasErrorMessage ? semanticColors.inputFocusBorderAlt : semanticColors.errorText, 'borderBottom')
+        focused &&
+          getInputFocusStyle(
+            !hasErrorMessage ? semanticColors.inputFocusBorderAlt : semanticColors.errorText,
+            effects.roundedCorner2,
+            'borderBottom'
+          )
       ]
     ],
     fieldGroup: [
@@ -185,16 +173,7 @@ export function getStyles(props: ITextFieldStyleProps): ITextFieldStyles {
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'stretch',
-        position: 'relative',
-        selectors: {
-          ':hover': {
-            selectors: {
-              [HighContrastSelector]: {
-                borderColor: 'Highlight'
-              }
-            }
-          }
-        }
+        position: 'relative'
       },
       multiline && {
         minHeight: '60px',
@@ -206,17 +185,24 @@ export function getStyles(props: ITextFieldStyleProps): ITextFieldStyles {
         !disabled && {
           selectors: {
             ':hover': {
-              borderColor: semanticColors.inputBorderHovered
+              borderColor: semanticColors.inputBorderHovered,
+              selectors: {
+                [HighContrastSelector]: {
+                  borderColor: 'Highlight'
+                }
+              }
             }
           }
         },
 
-      focused && !underlined && getFocusBorder(!hasErrorMessage ? semanticColors.inputFocusBorderAlt : semanticColors.errorText),
+      focused &&
+        !underlined &&
+        getInputFocusStyle(!hasErrorMessage ? semanticColors.inputFocusBorderAlt : semanticColors.errorText, effects.roundedCorner2),
       disabled && {
         borderColor: semanticColors.disabledBackground,
         selectors: {
-          ':hover': {
-            borderColor: semanticColors.disabledBackground
+          [HighContrastSelector]: {
+            borderColor: 'GrayText'
           }
         },
 

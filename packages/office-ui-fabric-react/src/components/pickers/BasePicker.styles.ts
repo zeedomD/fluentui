@@ -1,4 +1,4 @@
-import { getGlobalClassNames, hiddenContentStyle, HighContrastSelector } from '../../Styling';
+import { getGlobalClassNames, getInputFocusStyle, hiddenContentStyle, HighContrastSelector } from '../../Styling';
 import { IBasePickerStyleProps, IBasePickerStyles } from './BasePicker.types';
 
 const GlobalClassNames = {
@@ -48,12 +48,9 @@ export function getStyles(props: IBasePickerStyleProps): IBasePickerStyles {
             }
           }
         },
-      isFocused &&
-        !disabled && {
-          borderColor: inputFocusBorderAlt
-        },
+      isFocused && !disabled && getInputFocusStyle(inputFocusBorderAlt, effects.roundedCorner2),
       disabled && {
-        borderColor: 'transparent',
+        borderColor: disabledOverlayColor,
         selectors: {
           ':after': {
             content: '""',

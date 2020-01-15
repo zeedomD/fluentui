@@ -1,7 +1,64 @@
 # Change Log - @uifabric/experiments
 
-This log was last generated on Fri, 08 Nov 2019 12:30:07 GMT and should not be manually modified.
+This log was last generated on Mon, 13 Jan 2020 12:28:56 GMT and should not be manually modified.
 
+## 7.18.13
+Mon, 13 Jan 2020 12:28:56 GMT
+
+### Patches
+
+- Tile: fix color of text over image in dark mode (prchhaje@microsoft.com)
+- Consume compose functions where appropriate (tmichon@microsoft.com)
+## 7.18.12
+Fri, 10 Jan 2020 12:31:47 GMT
+
+### Patches
+
+- ComboBox: fix chevron button and focus border styling (xgao@microsoft.com)
+## 7.18.11
+Wed, 08 Jan 2020 17:02:57 GMT
+
+### Patches
+
+- Update snapshots from combobox style update (xgao@microsoft.com)
+- bumping load-themed-styles to take advantage of es6 version of it (kchau@microsoft.com)
+## 7.18.10
+Tue, 17 Dec 2019 12:29:42 GMT
+
+### Patches
+
+- Refining typography and signal icon on top of Folder Icon, filetype mapping updates (caperez@microsoft.com)
+- PersonaCoin: make divs role presentation (micahgodbolt@gmail.com)
+## 7.18.9
+Sun, 15 Dec 2019 23:45:36 GMT
+
+### Patches
+
+- Fix minor picker doc issue (elcraig@microsoft.com)
+## 7.18.8
+Fri, 06 Dec 2019 12:33:21 GMT
+
+### Patches
+
+- updated snapshots (betrue@microsoft.com)
+## 7.18.7
+Thu, 05 Dec 2019 12:34:16 GMT
+
+### Patches
+
+- ComboBox: empty errorMessage shouldn't create white space (aneeshak@microsoft.com)
+## 7.18.6
+Mon, 18 Nov 2019 12:33:30 GMT
+
+### Patches
+
+- update test due to fix: Combobox high contrast mode fixes for input box, caret down button, option hover styles (xgao@microsoft.com)
+## 7.18.5
+Thu, 14 Nov 2019 12:30:52 GMT
+
+### Patches
+
+- Added ariaLabel to microfeedback component (kamal.elkhadiri@microsoft.com)
 ## 7.18.4
 Fri, 08 Nov 2019 12:30:07 GMT
 

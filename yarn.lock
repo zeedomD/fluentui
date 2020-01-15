@@ -1064,17 +1064,17 @@
     source-map "~0.6.1"
     typescript "~3.5.3"
 
-"@microsoft/load-themed-styles@1.9.7", "@microsoft/load-themed-styles@^1.7.13":
-  version "1.9.7"
-  resolved "https://registry.yarnpkg.com/@microsoft/load-themed-styles/-/load-themed-styles-1.9.7.tgz#4f28d7097802317d2a491888ba65fac617c56dd4"
-  integrity sha512-8Iua4vPmffV2tT1nR/E55GSbUkYRPD9xFfa6v8zJ89EiiDrlyO2OGuXAtC6/nWxLTeVRA3GhtQuU2SApD2sQAA==
+"@microsoft/load-themed-styles@1.10.26", "@microsoft/load-themed-styles@^1.10.26":
+  version "1.10.26"
+  resolved "https://registry.yarnpkg.com/@microsoft/load-themed-styles/-/load-themed-styles-1.10.26.tgz#95673415103564e5427ca0d43f41da5cc44f29dc"
+  integrity sha512-N//pFTBL/iCSrMuDoLvBLpgGjlk+MgKX2kyFI3bJVb+LRozeyWCOZVRcR8aMKiYHdqwy5isu2Frp8drvWx7RbA==
 
-"@microsoft/loader-load-themed-styles@^1.6.0":
-  version "1.7.165"
-  resolved "https://registry.yarnpkg.com/@microsoft/loader-load-themed-styles/-/loader-load-themed-styles-1.7.165.tgz#1d5fb481a3ab0afbb2d8c8174462c03eff4bc962"
-  integrity sha512-OvylDfTP395M9jdgUyGZdR8VgN5mkZhLAsZ1I9jbl8KNb/c9tabsXQ98DfuhC5NSjDKP3YoNERTpkbz/MrfNkA==
+"@microsoft/loader-load-themed-styles@^1.7.205":
+  version "1.7.205"
+  resolved "https://registry.yarnpkg.com/@microsoft/loader-load-themed-styles/-/loader-load-themed-styles-1.7.205.tgz#40b62004f5c29f832b4f333030ed7ee6bf55d980"
+  integrity sha512-nDG4TEW2fH8ez03jz3boK3qaa/Iz7b36H6dvnwJebHCl3oCj804g4wYhPtVXzgxsLYNh0ZHeLO1tSvUYeClduw==
   dependencies:
-    "@microsoft/load-themed-styles" "1.9.7"
+    "@microsoft/load-themed-styles" "1.10.26"
     loader-utils "~1.1.0"
 
 "@microsoft/node-core-library@3.14.0":
@@ -9654,15 +9654,15 @@ lodash@^4.0.0, lodash@^4.15.0, lodash@^4.17.0, lodash@^4.17.10, lodash@^4.17.11,
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
 
+lodash@^4.17.15, lodash@~4.17.15:
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+
 lodash@~4.17.13:
   version "4.17.14"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
   integrity sha512-mmKYbW3GLuJeX+iGP+Y7Gp1AiGHGbXHCOh/jZmrawMmsE7MS4znI3RL2FsjbqOyMayHInjOeykW7PEajUk1/xw==
-
-lodash@~4.17.15:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
 
 log-symbols@^1.0.2:
   version "1.0.2"
@@ -10221,10 +10221,15 @@ moment@2.x.x, moment@^2.22.1:
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
   integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
 
-monaco-editor@0.18.1:
-  version "0.18.1"
-  resolved "https://registry.yarnpkg.com/monaco-editor/-/monaco-editor-0.18.1.tgz#ced7c305a23109875feeaf395a504b91f6358cfc"
-  integrity sha512-fmL+RFZ2Hrezy+X/5ZczQW51LUmvzfcqOurnkCIRFTyjdVjzR7JvENzI6+VKBJzJdPh6EYL4RoWl92b2Hrk9fw==
+monaco-editor@0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/monaco-editor/-/monaco-editor-0.19.0.tgz#c6e774210f3b292ff739e96f45a1cc78bf5ac2e7"
+  integrity sha512-ida++HI/s9V8ma8yYS9CAS0UJEFwW1gbt9G6oviEdv/aHhFd/kV3sXrINqC63TVdKzOZdKjPRRCOPJJ80zvLbw==
+
+monaco-typescript@3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/monaco-typescript/-/monaco-typescript-3.6.1.tgz#69a545a45e2a6d036a50d78508792b856f9968d7"
+  integrity sha512-VXzS/s/YoQlolf7zRsM7PGVhY+HUTTHcLzFCx1QxuyOpoY1uFlUaMeTIV/AMYzMjSqHIiJ58kNiWjoP1YNsaAQ==
 
 moo@^0.4.3:
   version "0.4.3"
@@ -10544,10 +10549,10 @@ node-pre-gyp@^0.12.0:
     semver "^5.3.0"
     tar "^4"
 
-node-sass@^4.5.3:
-  version "4.12.0"
-  resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.12.0.tgz#0914f531932380114a30cc5fa4fa63233a25f017"
-  integrity sha512-A1Iv4oN+Iel6EPv77/HddXErL2a+gZ4uBeZUy+a8O35CFYTXhgA8MgLCWBtwpGZdCvTvQ9d+bQxX/QC36GDPpQ==
+node-sass@^4.13.0:
+  version "4.13.0"
+  resolved "https://registry.npmjs.org/node-sass/-/node-sass-4.13.0.tgz#b647288babdd6a1cb726de4545516b31f90da066"
+  integrity sha512-W1XBrvoJ1dy7VsvTAS5q1V45lREbTlZQqFbiHb3R3OTTCma0XBtuG6xZ6Z4506nR4lmHPTqVRwxT6KgtWC97CA==
   dependencies:
     async-foreach "^0.1.3"
     chalk "^1.1.1"
@@ -10556,7 +10561,7 @@ node-sass@^4.5.3:
     get-stdin "^4.0.1"
     glob "^7.0.3"
     in-publish "^2.0.0"
-    lodash "^4.17.11"
+    lodash "^4.17.15"
     meow "^3.7.0"
     mkdirp "^0.5.1"
     nan "^2.13.2"
@@ -10889,10 +10894,10 @@ octokit-pagination-methods@^1.1.0:
   resolved "https://registry.yarnpkg.com/octokit-pagination-methods/-/octokit-pagination-methods-1.1.0.tgz#cf472edc9d551055f9ef73f6e42b4dbb4c80bea4"
   integrity sha512-fZ4qZdQ2nxJvtcasX7Ghl+WlWS/d9IgnBIwFZXVNNZUmzpno91SX5bc5vuxiuKoCtK78XxGGNuSCrDC7xYB3OQ==
 
-office-ui-fabric-core@^10.0.0:
-  version "10.1.0"
-  resolved "https://registry.yarnpkg.com/office-ui-fabric-core/-/office-ui-fabric-core-10.1.0.tgz#9b19386330bd439e42ee69f5debba84b4f78b1c5"
-  integrity sha512-t/CwL+02bwY7bNrrYaKAk++pf9RQoqsc56/hhuzoJ2muUvZYmQMDVG5jzUc6LU5uQvbafVjn9J+RpxM0EkiG0A==
+office-ui-fabric-core@^11.0.0:
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/office-ui-fabric-core/-/office-ui-fabric-core-11.0.0.tgz#73f43c8d1bd40e87971c7cda0ff1aa7bfa246410"
+  integrity sha512-K6+KGnBXXjfSxxZpp+4oDXVLgUc//7OnXrn8F08VoJnGhEz27WUf4ZuMa32SjGoqirWlb4JlKkXbOpC9cis6dQ==
 
 on-finished@~2.3.0:
   version "2.3.0"

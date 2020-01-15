@@ -2,6 +2,55 @@
   "name": "@uifabric/charting",
   "entries": [
     {
+      "date": "Wed, 08 Jan 2020 17:02:57 GMT",
+      "tag": "@uifabric/charting_v0.139.1",
+      "version": "0.139.1",
+      "comments": {
+        "none": [
+          {
+            "comment": "Break up build task into build, bundle, test and lint tasks. Add parallelization pipeline using new tasks.",
+            "author": "jagore@microsoft.com",
+            "commit": "f1f07695f5d18c2c975eef382c5b777d7ccb52e2"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "bumping load-themed-styles to take advantage of es6 version of it",
+            "author": "kchau@microsoft.com",
+            "commit": "9041aee981e0ad058920172d078af2d2cc2292db"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Tue, 26 Nov 2019 12:32:11 GMT",
+      "tag": "@uifabric/charting_v0.139.0",
+      "version": "0.139.0",
+      "comments": {
+        "minor": [
+          {
+            "comment": "removing the sticky={true} property from the hover card as the card should hide when the mouse goes away from the target element, and also added the gap space 12 to avoid the flickering issue of the hover card",
+            "author": "v-sivsar@microsoft.com",
+            "commit": "b37e7aeba72e73d45e239558a08f8636980e1630"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Tue, 19 Nov 2019 12:29:10 GMT",
+      "tag": "@uifabric/charting_v0.138.1",
+      "version": "0.138.1",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Fix the bug that x-axis for linechart does not display properly",
+            "author": "dajiang@microsoft.com",
+            "commit": "dbe454d44c1a8574397e9d27001da5659f1a9a04"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 05 Nov 2019 12:25:16 GMT",
       "tag": "@uifabric/charting_v0.138.0",
       "version": "0.138.0",

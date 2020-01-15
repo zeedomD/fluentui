@@ -4,10 +4,10 @@ import { Stack } from 'office-ui-fabric-react/lib/Stack';
 import { Text } from 'office-ui-fabric-react/lib/Text';
 import { ApiReferencesTable, gapTokens } from './ApiReferencesTable';
 import { IApiReferencesTableProps, IApiInterfaceProperty, IMethod, IApiReferencesTableSetProps } from './ApiReferencesTableSet.types';
-import { ITableRowJson, IPageJson, ILinkToken } from 'office-ui-fabric-react/lib/common/DocPage.types';
+import { ITableRowJson, IPageJson } from 'office-ui-fabric-react/lib/common/DocPage.types';
 import { extractAnchorLink } from '../../utilities/extractAnchorLink';
 import { jumpToAnchor } from '../../utilities/index2';
-import { getCurrentUrl } from '../../utilities/getCurrentUrl';
+import { getTokenResolver } from './tokenResolver';
 
 export interface IApiReferencesTableSetState {
   showSeeMore: boolean;
@@ -49,7 +49,7 @@ export class ApiReferencesTableSet extends React.Component<IApiReferencesTableSe
 
     const anchor = extractAnchorLink(window.location.hash);
 
-    if (anchor && !this.state.showSeeMore) {
+    if (anchor && !this._allVisible) {
       const section = this._tableProps.filter(x => x.name === anchor)[0];
       if (section) {
         this.setState({ showSeeMore: true });
@@ -67,6 +67,10 @@ export class ApiReferencesTableSet extends React.Component<IApiReferencesTableSe
     }
   }
 
+  private get _allVisible(): boolean {
+    return this.props.showAll || this.state.showSeeMore;
+  }
+
   private _renderFirst(): JSX.Element | undefined {
     if (this._tableProps.length >= 1) {
       const item = this._tableProps[0];
@@ -79,15 +83,17 @@ export class ApiReferencesTableSet extends React.Component<IApiReferencesTableSe
     if (this._tableProps.length > 1) {
       return (
         <Stack tokens={gapTokens.medium}>
-          <ActionButton
-            iconProps={{ iconName: this.state.showSeeMore ? 'SkypeCircleMinus' : 'CirclePlus' }}
-            onClick={this._onClickSeeMore}
-            onRenderText={this._onRenderText}
-            styles={seeMoreButtonStyles}
-          >
-            See more
-          </ActionButton>
-          {this.state.showSeeMore && (
+          {!this.props.showAll && (
+            <ActionButton
+              iconProps={{ iconName: this.state.showSeeMore ? 'SkypeCircleMinus' : 'CirclePlus' }}
+              onClick={this._onClickSeeMore}
+              onRenderText={this._onRenderText}
+              styles={seeMoreButtonStyles}
+            >
+              See more
+            </ActionButton>
+          )}
+          {this._allVisible && (
             <Stack tokens={gapTokens.large}>
               {this._tableProps.map((item: IApiReferencesTableProps, index: number) =>
                 index !== 0 ? <ApiReferencesTable key={item.name} {...item} /> : undefined
@@ -101,13 +107,11 @@ export class ApiReferencesTableSet extends React.Component<IApiReferencesTableSe
   }
 
   private _onHashChange = (): void => {
-    const { showSeeMore } = this.state;
-
     const anchor = extractAnchorLink(window.location.hash);
     if (anchor) {
       this.props.jumpToAnchors && jumpToAnchor(anchor, TITLE_LINE_HEIGHT);
 
-      if (!showSeeMore) {
+      if (!this._allVisible) {
         const section = this._tableProps.filter(x => x.name === anchor)[0];
         if (section) {
           this.setState({ showSeeMore: true });
@@ -132,19 +136,20 @@ function _generateTableProps(jsonDocs: IPageJson | undefined): IApiReferencesTab
     return [];
   }
 
-  const tokenResolver = _getTokenResolver();
+  const tokenResolver = getTokenResolver();
 
   const propsName: string = `I${jsonDocs.name}Props`;
   const results: IApiReferencesTableProps[] = [];
 
   for (const table of jsonDocs.tables) {
-    const { kind, name } = table;
+    const { kind, members, name, ...rest } = table;
 
     const tableProps: IApiReferencesTableProps = {
-      ...table,
+      ...rest,
+      name,
       title: kind !== 'typeAlias' ? name + ' ' + kind : name,
       renderAs: kind,
-      properties: table.members || [],
+      properties: members || [],
       tokenResolver: tokenResolver
     };
 
@@ -153,7 +158,7 @@ function _generateTableProps(jsonDocs: IPageJson | undefined): IApiReferencesTab
       const classMembers: IApiInterfaceProperty[] = (tableProps.properties = []);
       const classMethods: IMethod[] = (tableProps.methods = []);
 
-      (tableProps.properties as ITableRowJson[]).forEach((member: ITableRowJson) => {
+      (members as ITableRowJson[]).forEach(member => {
         if (member.kind === 'method') {
           classMethods.push(member);
         } else {
@@ -162,8 +167,10 @@ function _generateTableProps(jsonDocs: IPageJson | undefined): IApiReferencesTab
       });
     }
 
-    // to ensure that I{componentName}Props comes first
-    if (kind === 'interface' && propsName === table.name) {
+    if (jsonDocs.group === 'references' && jsonDocs.name === name) {
+      results.unshift(tableProps);
+    } else if (kind === 'interface' && propsName === name) {
+      // to ensure that I{componentName}Props comes first
       results.unshift(tableProps);
     } else {
       results.push(tableProps);
@@ -171,26 +178,4 @@ function _generateTableProps(jsonDocs: IPageJson | undefined): IApiReferencesTab
   }
 
   return results;
-}
-
-function _getTokenResolver(): IApiReferencesTableProps['tokenResolver'] {
-  // Get the area path to set correct href value on the links for the local site vs. the Fabric site.
-  // The "area path" for this purpose is typically /controls/web/ (website) or /examples/ (demo).
-  const currentRoute = getCurrentUrl().split('#')[1] || '';
-  // Remove the possible references/ part when matching
-  const areaPathMatch = currentRoute.match(/^(\/.+?\/)(references\/)?\w+$/);
-  const areaPath = (areaPathMatch && areaPathMatch[1]) || '/controls/web/';
-
-  return (token: Required<ILinkToken>) => {
-    // Currently the group is only relevant if it's references
-    const group = token.linkedPageGroup.toLowerCase() === 'references' ? '/references' : '';
-
-    const linkRoute = `${areaPath}${group}/${token.linkedPage.toLowerCase()}`;
-    const newTab = linkRoute !== currentRoute;
-
-    return {
-      href: `#${linkRoute}#${token.text}`,
-      target: newTab ? '_blank' : undefined
-    };
-  };
 }

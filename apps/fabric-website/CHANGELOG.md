@@ -1,7 +1,43 @@
 # Change Log - @uifabric/fabric-website
 
-This log was last generated on Wed, 06 Nov 2019 12:34:07 GMT and should not be manually modified.
+This log was last generated on Mon, 13 Jan 2020 12:28:56 GMT and should not be manually modified.
 
+## 7.7.6
+Mon, 13 Jan 2020 12:28:56 GMT
+
+### Patches
+
+- Fix UHF "skip to main content" link, and update focus properly when scrolling to anchors (elcraig@microsoft.com)
+## 7.7.5
+Wed, 08 Jan 2020 17:02:57 GMT
+
+### Patches
+
+- bumping load-themed-styles to take advantage of es6 version of it (kchau@microsoft.com)
+## 7.7.4
+Mon, 09 Dec 2019 12:29:23 GMT
+
+### Patches
+
+- updated Fabric Android Date Time Picker documentation (willdo@microsoft.com)
+## 7.7.3
+Fri, 06 Dec 2019 12:33:21 GMT
+
+### Patches
+
+- Updating RTL documentation. (Humberto.Morimoto@microsoft.com)
+## 7.7.2
+Tue, 03 Dec 2019 12:36:28 GMT
+
+### Patches
+
+- Updating mobile docs - including bottom navigation and iOS Shimmer. (emlynam@microsoft.com)
+## 7.7.1
+Thu, 28 Nov 2019 12:32:23 GMT
+
+### Patches
+
+- Update fabric core dependency in other package.json files (v-mare@microsoft.com)
 ## 7.7.0
 Wed, 06 Nov 2019 12:34:07 GMT
 

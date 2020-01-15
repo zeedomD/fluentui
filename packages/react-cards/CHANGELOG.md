@@ -1,7 +1,19 @@
 # Change Log - @uifabric/react-cards
 
-This log was last generated on Wed, 16 Oct 2019 12:33:21 GMT and should not be manually modified.
+This log was last generated on Wed, 08 Jan 2020 17:02:57 GMT and should not be manually modified.
 
+## 0.109.3
+Wed, 08 Jan 2020 17:02:57 GMT
+
+### Patches
+
+- bumping load-themed-styles to take advantage of es6 version of it (kchau@microsoft.com)
+## 0.109.2
+Thu, 12 Dec 2019 12:29:56 GMT
+
+### Patches
+
+- Card: Adding keyboard navigation and interaction on clickable Cards and fixing example styling. (Humberto.Morimoto@microsoft.com)
 ## 0.109.1
 Wed, 16 Oct 2019 12:33:21 GMT
 

@@ -5,6 +5,7 @@ import { classNamesFunction, divProperties, getNativeProps, getWindow, initializ
 import { FocusZone, FocusZoneDirection, IFocusZone } from '../../FocusZone';
 import { Icon } from '../../Icon';
 import { INav, INavLink, INavLinkGroup, INavProps, INavStyleProps, INavStyles } from './Nav.types';
+import { composeComponentAs, composeRenderFunction } from '@uifabric/utilities';
 
 // The number pixels per indentation level for Nav links.
 const _indentationSize = 14;
@@ -88,7 +89,7 @@ export class NavBase extends React.Component<INavProps, INavState> implements IN
   };
 
   private _renderNavLink(link: INavLink, linkIndex: number, nestingLevel: number): JSX.Element {
-    const { styles, groups, theme, onRenderLink = this._onRenderLink, linkAs: LinkAs = ActionButton, selectedAriaLabel } = this.props;
+    const { styles, groups, theme, selectedAriaLabel } = this.props;
     const isLinkWithIcon = link.icon || link.iconProps;
     const isSelectedLink = this._isLinkSelected(link);
     const classNames = getClassNames(styles!, {
@@ -104,6 +105,9 @@ export class NavBase extends React.Component<INavProps, INavState> implements IN
     const rel = link.url && link.target && !isRelativeUrl(link.url) ? 'noopener noreferrer' : undefined;
     const selectedStateAriaLabel = isSelectedLink && selectedAriaLabel ? selectedAriaLabel : undefined;
 
+    const LinkAs = this.props.linkAs ? composeComponentAs(this.props.linkAs, ActionButton) : ActionButton;
+    const onRenderLink = this.props.onRenderLink ? composeRenderFunction(this.props.onRenderLink, this._onRenderLink) : this._onRenderLink;
+
     return (
       <LinkAs
         className={classNames.link}
@@ -111,7 +115,7 @@ export class NavBase extends React.Component<INavProps, INavState> implements IN
         href={link.url || (link.forceAnchor ? '#' : undefined)}
         iconProps={link.iconProps || { iconName: link.icon }}
         onClick={link.onClick ? this._onNavButtonLinkClicked.bind(this, link) : this._onNavAnchorLinkClicked.bind(this, link)}
-        title={link.title || link.name}
+        title={link.title !== undefined ? link.title : link.name}
         target={link.target}
         rel={rel}
         disabled={link.disabled}
@@ -124,8 +128,9 @@ export class NavBase extends React.Component<INavProps, INavState> implements IN
             ? link.ariaLabel
             : undefined
         }
+        link={link}
       >
-        {onRenderLink(link, this._onRenderLink)}
+        {onRenderLink(link)}
       </LinkAs>
     );
   }

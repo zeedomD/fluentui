@@ -1,7 +1,49 @@
 # Change Log - @uifabric/date-time
 
-This log was last generated on Fri, 08 Nov 2019 12:30:07 GMT and should not be manually modified.
+This log was last generated on Wed, 08 Jan 2020 17:02:57 GMT and should not be manually modified.
 
+## 7.8.3
+Wed, 08 Jan 2020 17:02:57 GMT
+
+### Patches
+
+- bumping load-themed-styles to take advantage of es6 version of it (kchau@microsoft.com)
+## 7.8.2
+Wed, 11 Dec 2019 12:30:26 GMT
+
+### Patches
+
+- Allow focus on CalendarMonth header. (phtucker@microsoft.com)
+## 7.8.1
+Fri, 06 Dec 2019 12:33:21 GMT
+
+### Patches
+
+- updated snapshots (betrue@microsoft.com)
+## 7.8.0
+Tue, 03 Dec 2019 12:36:28 GMT
+
+### Minor changes
+
+- DatePicker: Making styles accept functions and objects and not only functions. (Humberto.Morimoto@microsoft.com)
+## 7.7.0
+Tue, 26 Nov 2019 12:32:11 GMT
+
+### Minor changes
+
+- applying a custom ref callback for days in the calendardaygrid to allow consumers to specify their own properties directly on the dom element (jolore@microsoft.com)
+## 7.6.0
+Mon, 25 Nov 2019 12:31:13 GMT
+
+### Minor changes
+
+- Accessibility fixes for date-time Calendar, adding new strings for new aria labels and fixing aria-live regions (jolore@microsoft.com)
+## 7.5.7
+Thu, 21 Nov 2019 12:30:32 GMT
+
+### Patches
+
+- updating work week hover state to match the actual days that are going to be selected. The mouse over state still takes the whole week into account (jolore@microsoft.com)
 ## 7.5.6
 Fri, 08 Nov 2019 12:30:07 GMT
 

@@ -106,7 +106,7 @@ exports[`Component Examples renders TextField.PrefixAndSuffix.Example.tsx correc
                 align-items: stretch;
                 background: #ffffff;
                 border-radius: 2px;
-                border: 1px solid #8a8886;
+                border: 1px solid #605e5c;
                 box-shadow: none;
                 box-sizing: border-box;
                 cursor: text;
@@ -307,7 +307,7 @@ exports[`Component Examples renders TextField.PrefixAndSuffix.Example.tsx correc
                 background: #ffffff;
                 border-color: #f3f2f1;
                 border-radius: 2px;
-                border: 1px solid #8a8886;
+                border: 1px solid #605e5c;
                 box-shadow: none;
                 box-sizing: border-box;
                 cursor: default;
@@ -324,11 +324,8 @@ exports[`Component Examples renders TextField.PrefixAndSuffix.Example.tsx correc
                 padding-top: 0px;
                 position: relative;
               }
-              &:hover {
-                border-color: #f3f2f1;
-              }
-              @media screen and (-ms-high-contrast: active){&:hover {
-                border-color: Highlight;
+              @media screen and (-ms-high-contrast: active){& {
+                border-color: GrayText;
               }
         >
           <div
@@ -527,7 +524,7 @@ exports[`Component Examples renders TextField.PrefixAndSuffix.Example.tsx correc
                 align-items: stretch;
                 background: #ffffff;
                 border-radius: 2px;
-                border: 1px solid #8a8886;
+                border: 1px solid #605e5c;
                 box-shadow: none;
                 box-sizing: border-box;
                 cursor: text;
@@ -723,7 +720,7 @@ exports[`Component Examples renders TextField.PrefixAndSuffix.Example.tsx correc
                 align-items: stretch;
                 background: #ffffff;
                 border-radius: 2px;
-                border: 1px solid #8a8886;
+                border: 1px solid #605e5c;
                 box-shadow: none;
                 box-sizing: border-box;
                 cursor: text;
