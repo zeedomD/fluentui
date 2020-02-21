@@ -8,7 +8,7 @@ interface ReactBaseThemeProps {
 }
 
 // we should decide on naming convention
-interface ButtonFluentTokens {}
+export interface ButtonFluentTokens {}
 
 interface ComponentTheme {
   componentVariables?: ComponentVariablesInput;
@@ -117,6 +117,9 @@ function makeFluentTheme(fabricTheme: ITheme, baseTheme: ThemeInput): any {
 
 const FabricToTeamsProvider: React.FunctionComponent<ReactBaseThemeProps> = props => {
   const { fluentOverridesTheme } = props;
+  if (!fluentOverridesTheme) {
+    return <>{props.children}</>;
+  }
   const theme = useTheme();
   const generatedTheme = React.useMemo(() => makeFluentTheme(theme, fluentOverridesTheme), [fluentOverridesTheme, theme]);
   return <Provider theme={generatedTheme}>{props.children}</Provider>;
