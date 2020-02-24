@@ -30,7 +30,8 @@ module.exports = api => {
     ['@babel/preset-typescript', { allowNamespaces: true }]
   ];
   const plugins = [
-    '@babel/plugin-proposal-class-properties',
+    ['@babel/plugin-proposal-decorators', { legacy: true }],
+    ['@babel/plugin-proposal-class-properties', { loose: true }],
     '@babel/plugin-proposal-nullish-coalescing-operator',
     ['@babel/plugin-proposal-object-rest-spread', { loose: true, useBuiltIns: true }],
     '@babel/plugin-proposal-optional-chaining',
