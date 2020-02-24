@@ -4,8 +4,6 @@
     "module": "esnext",
     "skipLibCheck": true,
     "paths": {
-      "office-ui-fabric-react": ["packages/office-ui-fabric-react/src"],
-      "@uifabric/*": ["packages/*/src"],
       "@fluentui/*": ["packages/fluentui/*/src/index"],
       "docs/*": ["packages/fluentui/docs/*"],
       "src/*": ["packages/fluentui/react/src/*"],
