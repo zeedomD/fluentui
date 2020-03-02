@@ -39,7 +39,7 @@
   "devDependencies": {
     "@uifabric/build": "^7.0.0",
     "@types/jss": "^9.5.8",
-    "@types/react": "16.8.11",
+    "@types/react": "16.9.23",
     "react": "16.8.6"
   },
   "peerDependencies": {
