@@ -14,7 +14,7 @@
     "@fluentui/react-context-selector": "^0.47.0",
     "@fluentui/react-proptypes": "^0.47.0",
     "@fluentui/styles": "^0.47.0",
-    "@popperjs/core": "^2.0.6",
+    "@popperjs/core": "^2.1.1",
     "classnames": "^2.2.6",
     "downshift": "3.2.14",
     "fela": "^10.6.1",
