@@ -1,0 +1,9 @@
+{
+  "type": "patch",
+  "comment": "Increasing the button focus border gapping from 1px to 2px in MDL2 Theme. After this change, the border will be more clear when focusing on the button.",
+  "packageName": "@uifabric/mdl2-theme",
+  "email": "zhde@microsoft.com",
+  "commit": "5f41901ce8d39b78d0a443c6e8000195bfb25bfb",
+  "dependentChangeType": "patch",
+  "date": "2020-03-24T08:01:28.442Z"
+}
