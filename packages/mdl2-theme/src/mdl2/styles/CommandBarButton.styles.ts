@@ -11,7 +11,7 @@ export const CommandBarButtonStyles = (props: IButtonProps): Partial<IButtonStyl
   return {
     root: {
       backgroundColor: palette.neutralLighter,
-      ...getFocusStyle(theme, { inset: 0 }),
+      ...getFocusStyle(theme, { inset: 1 }),
     },
     rootHovered: {
       backgroundColor: palette.neutralLight,

@@ -12,7 +12,7 @@ export const DefaultButtonStyles = (props: IButtonProps): Partial<IButtonStyles>
     root: {
       backgroundColor: palette.neutralLighter,
       border: '1px solid transparent',
-      ...getFocusStyle(theme, { inset: 0, borderColor: palette.white }),
+      ...getFocusStyle(theme, { inset: 1, borderColor: palette.white }),
     },
     rootHovered: {
       backgroundColor: palette.neutralLight,
